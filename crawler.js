@@ -20,7 +20,11 @@ while (ACTUAL_PAGE <= MAX_PAGES) {
 
             console.log(title)
 
-            fs.appendFile('offers.txt', title + '\n');
+            fs.appendFile('offers.json',
+                '{' +
+                    '"title": ' + '"' + title + '"' +
+                '}, \n'
+            );
         });
     });
 
