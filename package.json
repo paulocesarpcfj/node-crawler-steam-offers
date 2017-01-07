@@ -1,0 +1,27 @@
+{
+  "name": "steam-offers-chrome-extension",
+  "version": "1.0.0",
+  "description": "A Chrome Extension to list all the offers of Steam games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/pcfj/steam-offers-chrome-extension.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "react",
+    "node",
+    "js",
+    "javascript",
+    "steam",
+    "games",
+    "offer"
+  ],
+  "author": "Paulo César Junior",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/pcfj/steam-offers-chrome-extension#readme"
+}
