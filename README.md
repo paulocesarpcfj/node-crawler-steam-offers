@@ -19,3 +19,5 @@ to enter at Steam's Website. It does help who can't access the Steam website may
 ### How to Install
 
 Clone the project and run `npm install` to install the dependencies and then run `node crawler.js` to create the JSON file.
+
+Created by [paulocesarpcfj](https://github.com/paulocesarpcfj) - 2017
