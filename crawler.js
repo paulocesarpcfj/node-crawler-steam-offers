@@ -2,8 +2,9 @@ var request = require('request');
 var cheerio = require('cheerio');
 var fs = require('fs');
 
-var MAX_PAGES = 100;
+var MAX_PAGES = 15;
 var ACTUAL_PAGE = 1;
+var DATA = { results: []};
 
 while (ACTUAL_PAGE <= MAX_PAGES) {
     var URL_STEAM = 'http://store.steampowered.com/search/?sort_by=Price_ASC&category1=998&specials=1&page=' + ACTUAL_PAGE;
@@ -18,15 +19,12 @@ while (ACTUAL_PAGE <= MAX_PAGES) {
         $('#search_result_container > div > a').each(function() {
             var title = $(this).find('.title').text().trim();
 
-            console.log(title)
+            DATA.results.push({ title: title });
 
-            fs.appendFile('offers.json',
-                '{' +
-                    '"title": ' + '"' + title + '"' +
-                '}, \n'
-            );
+            fs.writeFile('offers.json', JSON.stringify(DATA), 'utf8');
         });
-    });
+
+    })
 
     ACTUAL_PAGE ++;
-}
+};
