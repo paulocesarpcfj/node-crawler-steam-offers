@@ -8,7 +8,7 @@ var DATA = { results: []};
 var URL_STEAM;
 
 function getOffers(actualPage = 1) {
-    URL_STEAM = 'http://store.steampowered.com/search/results?sort_by=Price_ASC&category1=998&specials=1&page=' + actualPage;
+    URL_STEAM = 'http://store.steampowered.com/search/results?sort_by=Price_ASC&category1=998&specials=1&cc=br&page=' + actualPage;
 
     request(URL_STEAM, function(err, res, body) {
         if(err) console.log('Erro: ' + err);
@@ -24,15 +24,6 @@ function getOffers(actualPage = 1) {
             var discount = $(this).find('.search_discount > span').text().trim();
             var oldPrice = $(this).find('.discounted > span > strike').text().trim();
             var newPrice = "R$ " + $(this).find('.discounted').text().trim().split('R$').pop().trim();
-
-            console.log('\n\n-------------------\n\n');
-            console.log(1, $(this).find('.discounted'));
-            console.log(2, $(this).find('.discounted').text());
-            console.log(3, $(this).find('.discounted').text().trim());
-            console.log(4, $(this).find('.discounted').text().trim().split('R$'));
-            console.log(5, $(this).find('.discounted').text().trim().split('R$').pop());
-            console.log(6, $(this).find('.discounted').text().trim().split('R$').pop().trim());
-            console.log('\n\n-------------------\n\n');
 
             DATA.results.push(
                 {
