@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/pcfj/steam-offers-chrome-extension.git"
   },
+  "engines": {
+    "node": "6.8.1"
+  },
   "keywords": [
     "chrome",
     "extension",

@@ -25,6 +25,8 @@ function getOffers(actualPage = 1) {
             var oldPrice = $(this).find('.discounted > span > strike').text().trim();
             var newPrice = "R$ " + $(this).find('.discounted').text().trim().split('R$').pop().trim();
 
+            console.log(newPrice)
+
             DATA.results.push(
                 {
                     link,
