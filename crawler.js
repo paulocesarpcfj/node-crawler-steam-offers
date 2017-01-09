@@ -1,6 +1,7 @@
 var express = require('express');
 var request = require('request');
 var cheerio = require('cheerio');
+var cors = require('cors')
 var fs = require('fs');
 
 var app = express();
@@ -44,6 +45,8 @@ function getOffers(actualPage = 1) {
         }
     });
 };
+
+app.use(cors());
 
 app.get('/', function (req, res) {
     getOffers();
