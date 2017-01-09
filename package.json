@@ -26,6 +26,10 @@
   "homepage": "https://bitbucket.org/pcfj/steam-offers-chrome-extension#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
+    "express": "^4.14.0",
     "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
