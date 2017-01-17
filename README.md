@@ -23,8 +23,6 @@ to enter at Steam's Website. It does help who can't access the Steam website may
 Clone the project and run `npm install` to install the dependencies and then run `node start` to up the server. Access `localhost:8080` to generate the JSON file.<br />
 
 #### Prod
-If you don't want to generate the JSON file manually, there's a Heroku APP uploaded, which has a Cron-Job creating the JSON file every 30 minutes. Just access this page to get the automatically generated JSON file, or access this page to generate the file manually at Heroku APP.
-
 If you don't want to generate the JSON file manually, there's a [Heroku APP](https://www.heroku.com/) uploaded, which has a [Cron-Job](https://cron-job.org/en/) creating the JSON file every 30 minutes. Just access [this page](https://node-crawler-steam-offers.herokuapp.com/api/offers.json) to get the automatically generated JSON file
 
 To generate the JSON manually at Heroku APP, access [this page](https://node-crawler-steam-offers.herokuapp.com/) and then [this page https://node-crawler-steam-offers.herokuapp.com/](https://node-crawler-steam-offers.herokuapp.com/) to get the new JSON.
