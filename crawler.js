@@ -5,7 +5,7 @@ var cors = require('cors');
 
 var app = express();
 
-function getOffers(page, searchFor) {
+function getOffers(page = 1, searchFor) {
     var DATA = { results: [] };
     var URL_STEAM = 'http://store.steampowered.com/search/results?sort_by=Price_ASC&category1=998&specials=1&cc=br&page=' + page;
 
