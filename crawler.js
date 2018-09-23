@@ -5,9 +5,13 @@ var cors = require('cors');
 
 var app = express();
 
-function getOffers(page) {
+function getOffers(page, searchFor) {
     var DATA = { results: [] };
     var URL_STEAM = 'http://store.steampowered.com/search/results?sort_by=Price_ASC&category1=998&specials=1&cc=br&page=' + page;
+
+    if (!!searchFor) {
+        URL_STEAM += '&term=' + searchFor;
+    }
 
     var request = {
         method: 'GET', 
@@ -49,7 +53,7 @@ app.use(cors());
 
 app.get('/', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
-    getOffers(req.query.page)
+    getOffers(req.query.page, req.query.searchFor)
         .then(function(offers) {
             res.send(offers);
         });
